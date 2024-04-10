@@ -1,6 +1,16 @@
+import { useEffect, useState } from "react";
 import Slider from "./Slider/Slider";
+import SinglePropertyCard from "./CardContainer/SinglePropertyCard";
 
 const Home = () => {
+  const [properties, setProperties] = useState([]);
+
+  useEffect(() => {
+    fetch("/property.json")
+      .then((res) => res.json())
+      .then((data) => setProperties(data));
+  }, []);
+
   return (
     <div>
       <Slider></Slider>
@@ -11,6 +21,13 @@ const Home = () => {
         Step into a realm of exceptional properties where every corner holds a
         story waiting to be told. Begin your journey here
       </p>
+      <div className=" grid md:grid-cols-2 gap-4">
+        {properties.map((property, index) => (
+          <SinglePropertyCard
+            key={index}
+            properties={property}></SinglePropertyCard>
+        ))}
+      </div>
     </div>
   );
 };

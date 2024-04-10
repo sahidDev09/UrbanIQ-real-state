@@ -4,65 +4,71 @@
     "title": "Modern Office Building in Downtown",
     "segment": "Office Buildings",
     "description": "A contemporary office building located in the heart of downtown. Features spacious offices, modern amenities, and convenient access to public transportation.",
-    "price": "$5,000,000",
+    "price": "$5,000",
     "status": "Sale",
-    "area": "10,000 sq ft",
-    "location": "Downtown, CityName",
-    "facilities": ["Parking", "Elevator"]
+    "area": "1,000 sq ft",
+    "location": "Downtown",
+    "facilities": ["Parking", "Elevator"],
+    "image": "https://i.ibb.co/Fsdjt1b/office-min.jpg"
   },
   {
     "id": 2,
     "title": "Prime Retail Space on Main Street",
     "segment": "Retail Spaces",
     "description": "Highly visible retail space situated on Main Street. Ideal for boutique shops, cafes, or specialty stores.",
-    "price": "$1,200,000",
-    "status": "Sale",
+    "price": "$1,200",
+    "status": "Rent",
     "area": "2,500 sq ft",
-    "location": "Main Street, CityName",
-    "facilities": ["Storefront Windows", "High Ceilings"]
+    "location": "Rivertown",
+    "facilities": ["Storefront Windows", "High Ceilings"],
+    "image": "https://i.ibb.co/S0RYpyV/retail-min.jpg"
   },
   {
     "id": 3,
     "title": "Spacious Warehouse with Loading Docks",
     "segment": "Warehouses",
     "description": "Large warehouse with multiple loading docks and high ceilings. Perfect for storage, distribution, or manufacturing purposes.",
-    "price": "$3,500,000",
+    "price": "$3,500",
     "status": "Sale",
-    "area": "20,000 sq ft",
-    "location": "Industrial Park, CityName",
-    "facilities": ["Loading Docks", "Office Space"]
+    "area": "2,000 sq ft",
+    "location": "Harbor City",
+    "facilities": ["Docks", "Office area"],
+    "image": "https://i.ibb.co/mXY9kxy/wearehiouse-min.jpg"
   },
   {
     "id": 4,
     "title": "Versatile Industrial Facility with Office Space",
     "segment": "Industrial Facilities",
     "description": "Flexible industrial facility with office space, manufacturing area, and ample parking. Suitable for a range of industrial operations.",
-    "price": "$4,800,000",
-    "status": "Sale",
-    "area": "15,000 sq ft",
-    "location": "Industrial Zone, CityName",
-    "facilities": ["Manufacturing Area", "Office Space"]
+    "price": "$4,800",
+    "status": "Rent",
+    "area": "1,500 sq ft",
+    "location": "Lakeside",
+    "facilities": ["Build Area", "Office Space"],
+    "image": "https://i.ibb.co/fHd8jr1/indusrtial-min.jpg"
   },
   {
     "id": 5,
     "title": "Upscale Restaurant in Busy District",
     "segment": "Restaurants",
     "description": "Elegant restaurant located in a bustling district. Features a fully equipped kitchen, dining area, and outdoor seating.",
-    "price": "$1,500,000",
+    "price": "$1,500",
     "status": "Sale",
     "area": "3,000 sq ft",
-    "location": "Restaurant Row, CityName",
-    "facilities": ["Commercial Kitchen", "Outdoor Seating"]
+    "location": "Sunnyside",
+    "facilities": ["Kitchen", "Outdoor Seating"],
+    "image": "https://i.ibb.co/CVhZr6D/restaurant-min.jpg"
   },
   {
     "id": 6,
     "title": "Exciting Entertainment Venue with Stage",
     "segment": "Entertainment Venues",
     "description": "Dynamic entertainment venue with a stage, sound system, and versatile layout. Ideal for concerts, performances, or special events.",
-    "price": "$2,700,000",
-    "status": "Sale",
+    "price": "$2,700",
+    "status": "Rent",
     "area": "5,000 sq ft",
-    "location": "Entertainment District, CityName",
-    "facilities": ["Stage", "Sound System"]
+    "location": "Summitville",
+    "facilities": ["Stage", "Sound System"],
+    "image": "https://i.ibb.co/DMcmMQh/entertainment-min.jpg"
   }
 ]
