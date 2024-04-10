@@ -21,7 +21,11 @@ const SinglePropertyCard = ({ properties }) => {
     <div className=" grid grid-cols-3 bg-slate-200 p-6 rounded-xl gap-4">
       {/* card image */}
       <div>
-        <img className=" min-h-full object-cover rounded-xl" src={image} alt="" />
+        <img
+          className=" min-h-full object-cover rounded-xl"
+          src={image}
+          alt=""
+        />
       </div>
 
       {/* card details */}
@@ -41,7 +45,7 @@ const SinglePropertyCard = ({ properties }) => {
         <p className=" text-sm text-gray-600">{description.slice(0, 50)}...</p>
         {/* location, area and price */}
 
-        <div className=" flex justify-between text-sm bg-gray-50 p-2 rounded-xl">
+        <div className="justify-between text-sm bg-gray-50 p-2 rounded-xl hidden md:inline-flex">
           <div className="area flex items-center gap-2">
             <div className=" p-2 bg-slate-200 text-xl rounded-md">
               <LiaExternalLinkSquareAltSolid></LiaExternalLinkSquareAltSolid>
@@ -66,15 +70,19 @@ const SinglePropertyCard = ({ properties }) => {
         {/* facilites and button */}
 
         <div className=" flex justify-between items-center">
-          <div className="facilites flex items-center gap-4">
+          <div className="facilites items-center gap-4 hidden md:inline-flex">
             {facilities.map((faci, index) => (
-              <div key={index} className=" flex items-center gap-2 text-sm text-gray-600">
+              <div
+                key={index}
+                className=" flex items-center gap-2 text-sm text-gray-600">
                 <FaHeart className=" text-2xl"></FaHeart>
                 <p>{faci}</p>
               </div>
             ))}
           </div>
-          <button className=" p-4 btn btn-success text-white">View Property</button>
+          <button className=" p-4 btn btn-success text-white">
+            View Property
+          </button>
         </div>
       </div>
     </div>
