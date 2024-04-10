@@ -3,9 +3,11 @@ import { LiaExternalLinkSquareAltSolid } from "react-icons/lia";
 import { FaMapLocationDot } from "react-icons/fa6";
 import { GiPriceTag } from "react-icons/gi";
 import { FaHeart } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 const SinglePropertyCard = ({ properties }) => {
   const {
+    id,
     image,
     title,
     price,
@@ -80,9 +82,11 @@ const SinglePropertyCard = ({ properties }) => {
               </div>
             ))}
           </div>
-          <button className=" p-4 btn btn-success text-white">
-            View Property
-          </button>
+          <Link to={`/property/${id}`}>
+            <button className=" p-4 btn btn-success text-white">
+              View Property
+            </button>
+          </Link>
         </div>
       </div>
     </div>
