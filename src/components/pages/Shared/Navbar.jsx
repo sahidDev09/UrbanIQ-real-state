@@ -1,5 +1,5 @@
 import { NavLink } from "react-router-dom";
-import logo from "../../../assets/urbanIQ_logo.png"
+import logo from "../../../assets/urbanIQ_logo.png";
 
 const Navbar = () => {
   const navlinks = (
@@ -7,11 +7,17 @@ const Navbar = () => {
       <li>
         <NavLink to="/">Home</NavLink>
       </li>
-      <li>
-        <NavLink to="/update">Update profile</NavLink>
-      </li>
+
       <li>
         <NavLink to="/team">Team</NavLink>
+      </li>
+
+      <li>
+        <NavLink to="/about">About</NavLink>
+      </li>
+
+      <li>
+        <NavLink to="/update">Update profile</NavLink>
       </li>
     </>
   );
@@ -20,7 +26,10 @@ const Navbar = () => {
     <div className="navbar bg-base-100">
       <div className="navbar-start">
         <div className="dropdown">
-          <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden z-40">
+          <div
+            tabIndex={0}
+            role="button"
+            className="btn btn-ghost lg:hidden z-40">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               className="h-5 w-5"
@@ -37,7 +46,7 @@ const Navbar = () => {
           </div>
           <ul
             tabIndex={0}
-            className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
+            className="menu menu-sm dropdown-content mt-3 z-[100] p-2 shadow bg-base-100 rounded-box w-52">
             {navlinks}
           </ul>
         </div>

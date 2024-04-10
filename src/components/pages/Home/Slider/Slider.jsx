@@ -1,13 +1,35 @@
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
+import "swiper/css/scrollbar";
 import SingleSlider from "./SingleSlider";
 import slider1 from "../../../../assets/sliderimg1.jpg";
 import slider2 from "../../../../assets/sliderimg2.jpg";
 import slider3 from "../../../../assets/sliderimg3.jpg";
+import {
+  A11y,
+  Autoplay,
+  Navigation,
+  Pagination,
+  Scrollbar,
+} from "swiper/modules";
 
 const Slider = () => {
   return (
-    <Swiper className=" mt-8" spaceBetween={50} slidesPerView={1}>
+    <Swiper
+      className=" mt-8"
+      spaceBetween={50}
+      slidesPerView={1}
+      loop={true}
+      autoplay={{
+        delay: 3500,
+        disableOnInteraction: false,
+      }}
+      modules={[Navigation, Pagination, Scrollbar, A11y, Autoplay]}
+      navigation
+      pagination={{ clickable: true }}
+      scrollbar={{ draggable: true }}>
       <SwiperSlide>
         <SingleSlider
           image={slider1}
