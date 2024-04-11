@@ -9,7 +9,8 @@
     "area": "1,000 sq ft",
     "location": "Downtown",
     "facilities": ["Parking", "Elevator"],
-    "image": "https://i.ibb.co/Fsdjt1b/office-min.jpg"
+    "image": "https://i.ibb.co/Fsdjt1b/office-min.jpg",
+    "long_description": "This contemporary office building in Downtown offers an ideal workspace for businesses seeking a prime location with modern amenities. Boasting spacious offices and state-of-the-art facilities, it provides a conducive environment for productivity and growth. With convenient access to public transportation, commuting is hassle-free for employees and clients. The building features ample parking and efficient elevators, enhancing convenience and accessibility. Whether you're a startup looking to establish a presence or an established firm seeking expansion, this office building caters to diverse business needs. Its strategic location, contemporary design, and array of amenities make it a sought-after destination for businesses aiming for success in Downtown."
   },
   {
     "id": 2,
@@ -20,8 +21,9 @@
     "status": "Rent",
     "area": "2,500 sq ft",
     "location": "Rivertown",
-    "facilities": ["Storefront Windows", "High Ceilings"],
-    "image": "https://i.ibb.co/S0RYpyV/retail-min.jpg"
+    "facilities": ["Storefront", "Ceilings"],
+    "image": "https://i.ibb.co/S0RYpyV/retail-min.jpg",
+    "long_description": "Located in Rivertown, this prime retail space on Main Street offers exceptional visibility and foot traffic for businesses. With a spacious area of 2,500 square feet, it provides ample room for boutique shops, cafes, or specialty stores to thrive. The storefront boasts an inviting facade, attracting customers and enhancing brand visibility. High ceilings create an open and airy atmosphere, enhancing the shopping experience for patrons. Positioned in a bustling district, this retail space ensures exposure to a diverse customer base and steady business opportunities. Whether you're launching a new venture or expanding an existing brand, this retail space provides the perfect platform for success in Rivertown's vibrant retail scene."
   },
   {
     "id": 3,
@@ -33,7 +35,8 @@
     "area": "2,000 sq ft",
     "location": "Harbor City",
     "facilities": ["Docks", "Office area"],
-    "image": "https://i.ibb.co/mXY9kxy/wearehiouse-min.jpg"
+    "image": "https://i.ibb.co/mXY9kxy/wearehiouse-min.jpg",
+    "long_description": "Situated in Harbor City, this spacious warehouse offers a versatile space for storage, distribution, or manufacturing. With 2,000 square feet of floor area, it provides ample room for businesses to optimize their operations. Equipped with multiple loading docks and high ceilings, it facilitates efficient logistics and maximizes storage capacity. The warehouse also includes dedicated office areas for administrative tasks and workflow management. Its strategic location in Harbor City ensures easy access to transportation networks, facilitating seamless distribution and supply chain management. Whether you're a growing enterprise or an established firm, this warehouse offers the perfect solution for your business needs in Harbor City's thriving industrial sector."
   },
   {
     "id": 4,
@@ -45,7 +48,8 @@
     "area": "1,500 sq ft",
     "location": "Lakeside",
     "facilities": ["Build Area", "Office Space"],
-    "image": "https://i.ibb.co/fHd8jr1/indusrtial-min.jpg"
+    "image": "https://i.ibb.co/fHd8jr1/indusrtial-min.jpg",
+    "long_description": "Located in Lakeside, this versatile industrial facility offers a blend of functional space and modern amenities. With 1,500 square feet of area, it caters to various industrial operations, from manufacturing to distribution. The facility includes dedicated office space for administrative tasks, providing a seamless workflow for businesses. Ample parking ensures convenience for employees and visitors, while the serene lakeside location offers a tranquil setting for daily operations. Whether you're a startup looking to establish a foothold or an established firm seeking expansion, this industrial facility provides the perfect canvas for success in Lakeside's industrial landscape."
   },
   {
     "id": 5,
@@ -57,7 +61,8 @@
     "area": "3,000 sq ft",
     "location": "Sunnyside",
     "facilities": ["Kitchen", "Outdoor Seating"],
-    "image": "https://i.ibb.co/CVhZr6D/restaurant-min.jpg"
+    "image": "https://i.ibb.co/CVhZr6D/restaurant-min.jpg",
+    "long_description": "This upscale restaurant in Sunnyside offers a sophisticated dining experience in a bustling district. With 3,000 square feet of space, it features a fully equipped kitchen, spacious dining area, and inviting outdoor seating. The restaurant's elegant ambiance and culinary excellence make it a destination for discerning diners seeking memorable experiences. Located in Sunnyside, a vibrant district known for its diverse culinary scene, this restaurant enjoys steady foot traffic and exposure to a diverse customer base. Whether you're a seasoned restaurateur or an aspiring chef, this upscale restaurant presents an enticing opportunity to elevate the dining landscape in Sunnyside."
   },
   {
     "id": 6,
@@ -69,6 +74,7 @@
     "area": "5,000 sq ft",
     "location": "Summitville",
     "facilities": ["Stage", "Sound System"],
-    "image": "https://i.ibb.co/DMcmMQh/entertainment-min.jpg"
+    "image": "https://i.ibb.co/DMcmMQh/entertainment-min.jpg",
+    "long_description": "Located in Summitville, this dynamic entertainment venue sets the stage for unforgettable experiences. With 5,000 square feet of space, it boasts a versatile layout that caters to concerts, performances, and special events. The venue features a state-of-the-art stage, sound system, and lighting effects, providing an immersive experience for artists and audiences alike. Positioned in Summitville's cultural hub, it serves as a hotspot for creativity, community engagement, and cultural enrichment. Whether you're hosting live music, comedy shows, or corporate events, this entertainment venue offers endless possibilities for memorable experiences and artistic expression."
   }
 ]

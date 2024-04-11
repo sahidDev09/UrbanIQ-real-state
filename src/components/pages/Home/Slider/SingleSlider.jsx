@@ -1,5 +1,6 @@
 /* eslint-disable react/prop-types */
 import { FaSearch } from "react-icons/fa";
+import 'animate.css';
 
 const SingleSlider = ({ image, title, message }) => {
   return (
@@ -8,9 +9,9 @@ const SingleSlider = ({ image, title, message }) => {
       style={{ backgroundImage: `url('${image}')` }}>
       <div className="bg-gradient-to-l from-transparent to-black/80 w-full min-h-screen flex items-center">
         <div className="md:w-[60%] w-full flex flex-col gap-3 items-start p-10 md:ml-5">
-          <h1 className="lg:text-6xl md:text-4xl text-3xl font-semibold text-white">{title}</h1>
-          <p className="text-gray-300 md:w-[80%]">{message}</p>
-          <div className="md:w-[60%] w-full bg-white flex items-center justify-between rounded-md">
+          <h1 className="animate__animated animate__bounceInLeft lg:text-6xl md:text-4xl text-3xl font-semibold text-white">{title}</h1>
+          <p className="text-gray-300 md:w-[80%] animate__animated animate__bounceInLeft animate__delay-1s">{message}</p>
+          <div className="md:w-[60%] w-full bg-white flex items-center justify-between rounded-md animate__animated animate__fadeInUp">
             <input
               className="md:w-[70%] w-full py-3 focus:outline-none ml-4"
               type="text"
