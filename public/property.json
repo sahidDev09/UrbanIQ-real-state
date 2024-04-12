@@ -47,7 +47,7 @@
     "status": "Rent",
     "area": "1,500 sq ft",
     "location": "Lakeside",
-    "facilities": ["Build Area", "Office Space"],
+    "facilities": ["Build Area", "Office "],
     "image": "https://i.ibb.co/fHd8jr1/indusrtial-min.jpg",
     "long_description": "Located in Lakeside, this versatile industrial facility offers a blend of functional space and modern amenities. With 1,500 square feet of area, it caters to various industrial operations, from manufacturing to distribution. The facility includes dedicated office space for administrative tasks, providing a seamless workflow for businesses. Ample parking ensures convenience for employees and visitors, while the serene lakeside location offers a tranquil setting for daily operations. Whether you're a startup looking to establish a foothold or an established firm seeking expansion, this industrial facility provides the perfect canvas for success in Lakeside's industrial landscape."
   },
@@ -60,7 +60,7 @@
     "status": "Sale",
     "area": "3,000 sq ft",
     "location": "Sunnyside",
-    "facilities": ["Kitchen", "Outdoor Seating"],
+    "facilities": ["Kitchen", "Seating"],
     "image": "https://i.ibb.co/CVhZr6D/restaurant-min.jpg",
     "long_description": "This upscale restaurant in Sunnyside offers a sophisticated dining experience in a bustling district. With 3,000 square feet of space, it features a fully equipped kitchen, spacious dining area, and inviting outdoor seating. The restaurant's elegant ambiance and culinary excellence make it a destination for discerning diners seeking memorable experiences. Located in Sunnyside, a vibrant district known for its diverse culinary scene, this restaurant enjoys steady foot traffic and exposure to a diverse customer base. Whether you're a seasoned restaurateur or an aspiring chef, this upscale restaurant presents an enticing opportunity to elevate the dining landscape in Sunnyside."
   },

@@ -1,6 +1,8 @@
 import { useEffect, useState } from "react";
 import Slider from "./Slider/Slider";
 import SinglePropertyCard from "./CardContainer/SinglePropertyCard";
+import TrustedCompany from "./TrustedCo/TrustedCompany";
+import Contact from "./Contact/Contact";
 
 const Home = () => {
   const [properties, setProperties] = useState([]);
@@ -28,6 +30,9 @@ const Home = () => {
             properties={property}></SinglePropertyCard>
         ))}
       </div>
+
+      <TrustedCompany></TrustedCompany>
+      <Contact></Contact>
     </div>
   );
 };

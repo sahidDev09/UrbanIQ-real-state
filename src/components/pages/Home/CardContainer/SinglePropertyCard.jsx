@@ -76,14 +76,14 @@ const SinglePropertyCard = ({ properties }) => {
             {facilities.map((faci, index) => (
               <div
                 key={index}
-                className=" flex items-center gap-2 text-sm text-gray-600">
+                className=" flex items-center gap-2 text-xs text-gray-600">
                 <FaHeart className=" text-2xl"></FaHeart>
                 <p>{faci}</p>
               </div>
             ))}
           </div>
           <Link to={`/property/${id}`}>
-            <button className=" p-4 btn btn-success text-white">
+            <button className=" text-sm p-4 btn btn-success text-white">
               View Property
             </button>
           </Link>
