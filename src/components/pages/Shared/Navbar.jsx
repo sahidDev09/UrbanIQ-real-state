@@ -1,4 +1,4 @@
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import logo from "../../../assets/urbanIQ_logo.png";
 
 const Navbar = () => {
@@ -14,6 +14,10 @@ const Navbar = () => {
 
       <li>
         <NavLink to="/about">About</NavLink>
+      </li>
+
+      <li>
+        <a href="#contact">Contact</a>
       </li>
 
       <li>
@@ -56,7 +60,7 @@ const Navbar = () => {
         <ul className="menu menu-horizontal px-1">{navlinks}</ul>
       </div>
       <div className="navbar-end">
-        <a className="btn bg-success text-white">Login</a>
+        <Link to="/login"><button className="btn bg-success text-white">Login</button></Link>
       </div>
     </div>
   );

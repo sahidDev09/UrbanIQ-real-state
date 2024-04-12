@@ -7,6 +7,8 @@ import Contact from "./Contact/Contact";
 const Home = () => {
   const [properties, setProperties] = useState([]);
 
+  //card json data
+
   useEffect(() => {
     fetch("/property.json")
       .then((res) => res.json())
@@ -14,7 +16,7 @@ const Home = () => {
   }, []);
 
   return (
-    <div className=" p-2 md:p-3 lg:p-0">
+    <div className="p-2 md:p-3 lg:p-0">
       <Slider></Slider>
       <h1 className="md:text-4xl text-3xl text-center font-semibold mt-8">
         Our Properties

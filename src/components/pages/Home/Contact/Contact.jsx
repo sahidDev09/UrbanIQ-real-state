@@ -2,7 +2,7 @@ import "./Contact.css";
 
 const Contact = () => {
   return (
-    <div>
+    <div id="contact">
       <section className="contact rounded-md">
         <div className="container">
           <div className="left">

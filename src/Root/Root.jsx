@@ -4,13 +4,13 @@ import Footer from "../components/pages/Shared/Footer";
 
 const Root = () => {
   return (
-    <>
-      <div className=" container mx-auto font-pop">
+    <div className="mainroot">
+      <div className="container mx-auto font-pop">
         <Navbar></Navbar>
         <Outlet></Outlet>
       </div>
       <Footer></Footer>
-    </>
+    </div>
   );
 };
 
