@@ -26,7 +26,7 @@ const SinglePropertyCard = ({ properties }) => {
         <img
           className=" min-h-full object-cover rounded-xl"
           src={image}
-          alt=""
+          alt="Loading"
         />
       </div>
 

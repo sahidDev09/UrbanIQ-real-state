@@ -16,8 +16,8 @@ const PropertyDetails = () => {
   const property = properties.find((p) => p.id === idInt);
 
   return (
-    <div>
-      <div className="grid lg:grid-cols-2 md:grid-cols-1  gap-5">
+    <div className=" p-2 md:p-0 lg:p-0 md:mb-5 lg:mb-0">
+      <div className="grid lg:grid-cols-2 md:grid-cols-1  md:gap-5 lg:gap-5 gap-2">
         {/* images and long descriptions */}
         <div className="animate__animated animate__bounceInLeft">
           <h1 className=" text-3xl font-bold my-5">{property.title}</h1>
@@ -32,7 +32,7 @@ const PropertyDetails = () => {
           </p>
         </div>
         {/* All details */}
-        <div className="p-6 border bg-slate-200 h-[90%] my-auto flex flex-col gap-4 justify-left rounded-md">
+        <div className="p-6 border bg-slate-200 h-[100%] md:h-[100%] lg:h-[90%] my-auto flex flex-col gap-4 justify-left rounded-md">
           <h1 className="text-xl ">Full Details</h1>
           <hr />
           <div className=" flex flex-col gap-3 ">

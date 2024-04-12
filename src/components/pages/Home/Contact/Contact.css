@@ -44,12 +44,12 @@
 
 .contact_heading a {
   text-decoration: none;
-  color: #d17fa1;
+  color: #0c733c;
   cursor: pointer;
 }
 
 .contact_heading span {
-  color: #c01660;
+  color: #16a649;
   font-size: 4rem;
 }
 
@@ -131,11 +131,11 @@ textarea.contact_input ~ .icon {
 }
 
 .input_wrap.focus label {
-  color: #e31a70;
+  color: #25a248;
 }
 
 .input_wrap.focus .icon {
-  color: #e31a70;
+  color: #25a248;
 }
 
 .input_wrap.not-empty label {
@@ -246,7 +246,7 @@ textarea.contact_input ~ .icon {
 
 #dashed_wave {
   fill: none;
-  stroke: #d17fa1;
+  stroke: #088040;
   stroke-width: 1px;
   stroke-dasharray: 6.5;
   opacity: 0.8;
