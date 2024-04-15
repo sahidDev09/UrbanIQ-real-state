@@ -5,15 +5,15 @@ import { initializeApp } from "firebase/app";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyC8dPvofmZwc5JWvkykI6RQHV_WqsUrL18",
-  authDomain: "urbaniq-d48a8.firebaseapp.com",
-  projectId: "urbaniq-d48a8",
-  storageBucket: "urbaniq-d48a8.appspot.com",
-  messagingSenderId: "689459995335",
-  appId: "1:689459995335:web:a14d623428d2e274d454e2",
+  apiKey: "AIzaSyDdRYlfB1E-Ys2ATcgZ7CqxL-dzmZ4lIH0",
+  authDomain: "urbaniq-2da33.firebaseapp.com",
+  projectId: "urbaniq-2da33",
+  storageBucket: "urbaniq-2da33.appspot.com",
+  messagingSenderId: "490695730400",
+  appId: "1:490695730400:web:bdbe1af30653e95f4cdc85"
 };
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
 
-export default app;
+export default app

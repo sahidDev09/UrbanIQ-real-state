@@ -1,7 +1,11 @@
 import { Link, NavLink } from "react-router-dom";
 import logo from "../../../assets/urbanIQ_logo.png";
+import { useContext } from "react";
+import { AuthContext } from "../../../Providers/AuthProvider";
 
 const Navbar = () => {
+  const { logOut, user } = useContext(AuthContext);
+
   const navlinks = (
     <>
       <li>
@@ -20,9 +24,11 @@ const Navbar = () => {
         <a href="#contact">Contact</a>
       </li>
 
-      <li>
-        <NavLink to="/update">Update profile</NavLink>
-      </li>
+      {user && (
+        <li>
+          <NavLink to="/update">Update profile</NavLink>
+        </li>
+      )}
     </>
   );
 
@@ -60,7 +66,26 @@ const Navbar = () => {
         <ul className="menu menu-horizontal px-1">{navlinks}</ul>
       </div>
       <div className="navbar-end">
-        <Link to="/login"><button className="btn bg-success text-white">Login</button></Link>
+        {user ? (
+          <div className=" flex items-center gap-2">
+            <div className="w-12 h-12 overflow-hidden rounded-full border p-1">
+              <img
+                className=" rounded-full"
+                alt="Tailwind CSS Navbar component"
+                src={user.photoURL}
+              />
+            </div>
+            <Link>
+              <button onClick={logOut} className="btn bg-success text-white">
+                Logout
+              </button>
+            </Link>
+          </div>
+        ) : (
+          <Link to="/login">
+            <button className="btn bg-success text-white">Login</button>
+          </Link>
+        )}
       </div>
     </div>
   );

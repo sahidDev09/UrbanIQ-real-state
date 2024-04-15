@@ -1,9 +1,13 @@
 import { Link } from "react-router-dom";
 import errorimg from "../assets/error.jpg";
+import { Helmet } from "react-helmet-async";
 
 const Error = () => {
   return (
     <div className=" flex flex-col justify-center items-center min-h-screen">
+      <Helmet>
+        <title>UrbanIQ | page not found</title>
+      </Helmet>
       <img className=" w-[40vw]" src={errorimg} alt="" />
 
       <Link to="/">

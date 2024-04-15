@@ -5,6 +5,7 @@ import PropertyDetails from "../components/pages/Home/CardContainer/PropertyDeta
 import Error from "../Root/Error";
 import Login from "../components/pages/Authentication/Login";
 import Register from "../components/pages/Authentication/Register";
+import PrivateRoute from "../privateRoute/PrivateRoute";
 
 const router = createBrowserRouter([
   {
@@ -18,7 +19,11 @@ const router = createBrowserRouter([
       },
       {
         path: "/property/:id",
-        element: <PropertyDetails></PropertyDetails>,
+        element: (
+          <PrivateRoute>
+            <PropertyDetails></PropertyDetails>
+          </PrivateRoute>
+        ),
         loader: () => fetch("/property.json"),
       },
 
@@ -27,9 +32,9 @@ const router = createBrowserRouter([
         element: <Login></Login>,
       },
       {
-        path : '/register',
-        element: <Register></Register>
-      }
+        path: "/register",
+        element: <Register></Register>,
+      },
     ],
   },
 ]);

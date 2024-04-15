@@ -1,25 +1,48 @@
+/* eslint-disable no-unused-vars */
 import { Link } from "react-router-dom";
-import { FaArrowRightLong } from "react-icons/fa6";
 import { MdAddPhotoAlternate } from "react-icons/md";
-import "./Login.css";
 import { IoMdEyeOff } from "react-icons/io";
+import { FaArrowRightLong } from "react-icons/fa6";
+import { useContext } from "react";
+import { AuthContext } from "../../../Providers/AuthProvider";
+import { useForm } from "react-hook-form";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+import { Helmet } from "react-helmet-async";
 
 const Register = () => {
-  const handleRegister = (e) => {
-    e.preventDefault();
-    alert("hi sahid iam clicked");
+  const { createUser, user } = useContext(AuthContext);
+
+  const { register, handleSubmit } = useForm();
+
+  const onSubmit = (data) => {
+    createUser(data.email, data.password)
+      .then((result) => {
+        toast.success("User create successfully");
+        console.log(result.user);
+      })
+      .catch((error) => {
+        toast.error(error.message + "Something went wrong");
+      });
   };
 
   return (
     <div className="lg:px-40 md:px-10 lg:py-8 mainLogin p-2 md:p-0">
-      <div className=" bg-slate-200 grid lg:grid-cols-2 rounded-xl">
-        <div className=" flex flex-col gap-3 p-10 justify-between">
-          <h1 className=" text-3xl font-bold text-center mb-4">
-            Create Acccount
+      <Helmet>
+        <title>UrbanIQ | Register</title>
+      </Helmet>
+      <div className="bg-slate-200 grid lg:grid-cols-2 rounded-xl">
+        <div className="flex flex-col gap-3 p-10 justify-between">
+          <h1 className="text-3xl font-bold text-center mb-4">
+            Create Account
           </h1>
           <div className="flex flex-col gap-3">
-            <form onSubmit={handleRegister} className="flex flex-col gap-3">
-              <label className=" ml-4">Username</label>
+            <form
+              onSubmit={handleSubmit(onSubmit)}
+              className="flex flex-col gap-3">
+              <label htmlFor="username" className="ml-4">
+                Username
+              </label>
               <label className="input flex items-center gap-2 rounded-full h-[60px]">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -28,20 +51,35 @@ const Register = () => {
                   className="w-4 h-4 opacity-70">
                   <path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6ZM12.735 14c.618 0 1.093-.561.872-1.139a6.002 6.002 0 0 0-11.215 0c-.22.578.254 1.139.872 1.139h9.47Z" />
                 </svg>
-                <input type="text" className="grow" placeholder="Username" />
-              </label>
-
-              <label className=" ml-4">PhotoURL</label>
-              <label className="input flex items-center gap-2 rounded-full h-[60px]">
-                <MdAddPhotoAlternate className=" text-lg text-gray-500"></MdAddPhotoAlternate>
                 <input
                   type="text"
                   className="grow"
-                  placeholder="https//:example.jpeg"
+                  id="username"
+                  name="username"
+                  placeholder="Username"
+                  required
+                  {...register("fullName", { required: true })}
                 />
               </label>
 
-              <label className="ml-4">Email</label>
+              <label htmlFor="photoURL" className="ml-4">
+                Photo URL
+              </label>
+              <label className="input flex items-center gap-2 rounded-full h-[60px]">
+                <MdAddPhotoAlternate className="text-lg text-gray-500" />
+                <input
+                  type="text"
+                  className="grow"
+                  id="photoURL"
+                  name="photoURL"
+                  placeholder="https://example.jpeg"
+                  {...register("photoURL", { required: true })}
+                />
+              </label>
+
+              <label htmlFor="email" className="ml-4">
+                Email
+              </label>
               <label className="input flex items-center gap-2 rounded-full h-[60px]">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -54,15 +92,18 @@ const Register = () => {
                 <input
                   type="email"
                   className="grow"
+                  id="email"
                   name="email"
                   placeholder="Enter your E-mail"
+                  {...register("email", { required: true })}
                 />
               </label>
 
-              <label className=" ml-4">Password</label>
-
+              <label htmlFor="password" className="ml-4">
+                Password
+              </label>
               <label className="input flex items-center justify-between gap-2 rounded-full h-[60px]">
-                <div className=" flex items-center w-full gap-2 ">
+                <div className="flex items-center w-full gap-2">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     viewBox="0 0 16 16"
@@ -77,11 +118,13 @@ const Register = () => {
                   <input
                     type="password"
                     className="grow"
+                    id="password"
                     name="password"
                     placeholder="Set your secret password"
+                    {...register("password", { required: true })}
                   />
                 </div>
-                <IoMdEyeOff className=" text-xl text-gray-600"></IoMdEyeOff>
+                <IoMdEyeOff className="text-xl text-gray-600" />
               </label>
 
               <input
@@ -92,30 +135,30 @@ const Register = () => {
             </form>
           </div>
 
-          {/* redicret register page */}
-
-          <div className=" flex mx-auto mt-4">
-            <h1 className=" flex items-center lg:gap-3 text-sm mx-auto ">
+          {/* Redirect to login page */}
+          <div className="flex mx-auto mt-4">
+            <h1 className="flex items-center lg:gap-3 text-sm mx-auto">
               Already have an account
               <span>
                 <FaArrowRightLong></FaArrowRightLong>
               </span>
-              <Link to="/login">
-                <button className=" font-bold text-blue-400">Login</button>
+              <Link to="/login" className="font-bold text-blue-400">
+                Login
               </Link>
             </h1>
           </div>
         </div>
 
-        {/* image container */}
-        <div className="loginsideimg hidden lg:inline md:inline ">
+        {/* Image container */}
+        <div className="loginsideimg hidden lg:inline md:inline">
           <img
-            className=" w-full h-full rounded-tr-xl rounded-br-xl object-cover object-center"
+            className="w-full h-full rounded-tr-xl rounded-br-xl object-cover object-center"
             src="https://i.ibb.co/DDy7rvk/regi.jpg"
-            alt=""
+            alt="Registration"
           />
         </div>
       </div>
+      <ToastContainer />
     </div>
   );
 };

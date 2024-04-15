@@ -7,6 +7,7 @@ import { FaExternalLinkSquareAlt } from "react-icons/fa";
 import { FaLocationArrow } from "react-icons/fa";
 import { IoIosPricetags } from "react-icons/io";
 import "animate.css";
+import { Helmet } from "react-helmet-async";
 
 const PropertyDetails = () => {
   const properties = useLoaderData();
@@ -17,6 +18,9 @@ const PropertyDetails = () => {
 
   return (
     <div className=" p-2 md:p-0 lg:p-0 md:mb-5 lg:mb-0">
+      <Helmet>
+        <title>UrbanIQ | PropertyDetails</title>
+      </Helmet>
       <div className="grid lg:grid-cols-2 md:grid-cols-1  md:gap-5 lg:gap-5 gap-2">
         {/* images and long descriptions */}
         <div className="animate__animated animate__bounceInLeft">

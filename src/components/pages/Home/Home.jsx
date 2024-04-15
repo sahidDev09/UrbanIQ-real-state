@@ -3,6 +3,7 @@ import Slider from "./Slider/Slider";
 import SinglePropertyCard from "./CardContainer/SinglePropertyCard";
 import TrustedCompany from "./TrustedCo/TrustedCompany";
 import Contact from "./Contact/Contact";
+import { Helmet } from "react-helmet-async";
 
 const Home = () => {
   const [properties, setProperties] = useState([]);
@@ -17,6 +18,9 @@ const Home = () => {
 
   return (
     <div className="p-2 md:p-3 lg:p-0">
+      <Helmet>
+        <title>UrbanIQ | Home</title>
+      </Helmet>
       <Slider></Slider>
       <h1 className="md:text-4xl text-3xl text-center font-semibold mt-8">
         Our Properties
