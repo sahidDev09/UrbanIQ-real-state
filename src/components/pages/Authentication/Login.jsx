@@ -1,6 +1,5 @@
-import { Link, useNavigate } from "react-router-dom";
-import googlelogin from "../../../assets/Googlelogin.png";
-import githubLogin from "../../../assets/Githublogin.png";
+import { Link, useLocation, useNavigate } from "react-router-dom";
+
 import { FaArrowRightLong } from "react-icons/fa6";
 import { IoMdEyeOff } from "react-icons/io";
 import { useForm } from "react-hook-form";
@@ -10,24 +9,27 @@ import { AuthContext } from "../../../Providers/AuthProvider";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { Helmet } from "react-helmet-async";
+import OthersLogin from "./OthersLogin";
 
 const Login = () => {
-  const { loginUser, googleLogin, gitLogin } = useContext(AuthContext);
+  const { loginUser } = useContext(AuthContext);
   const { register, handleSubmit } = useForm();
 
   const navigate = useNavigate();
+  const location = useLocation();
+  const from = location?.state || "/";
 
   const onSubmit = (data) => {
     loginUser(data.email, data.password)
-      .then(() => {
-        toast.success("logged in");
+      .then((result) => {
+        if (result.user) {
+          //navigate route
 
-        // redirect to same about page after logged in
-
-        navigate(location?.state ? location.state : "/");
+          navigate(from);
+        }
       })
-      .catch((error) => {
-        toast.error(error.message);
+      .catch(() => {
+        toast.error("Please check email and password!");
       });
   };
 
@@ -57,6 +59,7 @@ const Login = () => {
                   type="email"
                   className="grow"
                   name="email"
+                  autoComplete=""
                   placeholder="Enter your E-mail"
                   required
                   {...register("email", { required: true })}
@@ -82,6 +85,7 @@ const Login = () => {
                     type="password"
                     className="grow"
                     name="password"
+                    autoComplete="current-password"
                     placeholder="Enter your secret password"
                     required
                     {...register("password", { required: true })}
@@ -103,29 +107,7 @@ const Login = () => {
 
             {/* other methods google and git */}
 
-            <div className="grid grid-cols-2 gap-3 mt-3">
-              <div
-                onClick={() => googleLogin()}
-                className=" cursor-pointer google bg-slate-400 hover:bg-slate-700 hover:border border-green-500 p-2 rounded-md flex items-center gap-2">
-                <div className=" p-2 bg-slate-200 w-10 rounded-md">
-                  <img src={googlelogin} alt="" />
-                </div>
-                <h1 className=" text-white text-sm lg:text-normal">
-                  With <span className=" font-semibold">Google</span>
-                </h1>
-              </div>
-
-              <div
-                onClick={() => gitLogin()}
-                className=" hover:border border-green-500 cursor-pointer github bg-slate-800 hover:bg-slate-500 p-2 rounded-md flex items-center gap-2">
-                <div className=" p-2 bg-slate-200 w-10 rounded-md">
-                  <img src={githubLogin} alt="" />
-                </div>
-                <h1 className=" text-white text-sm lg:text-normal">
-                  With <span className=" font-semibold">Github</span>
-                </h1>
-              </div>
-            </div>
+            <OthersLogin></OthersLogin>
           </div>
 
           {/* redicret register page */}

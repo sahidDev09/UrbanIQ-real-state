@@ -1,5 +1,5 @@
 /* eslint-disable no-unused-vars */
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { MdAddPhotoAlternate } from "react-icons/md";
 import { IoMdEyeOff } from "react-icons/io";
 import { FaArrowRightLong } from "react-icons/fa6";
@@ -15,11 +15,18 @@ const Register = () => {
 
   const { register, handleSubmit } = useForm();
 
+  const navigate = useNavigate();
+  const location = useLocation();
+  const from = location?.state || "/";
+
   const onSubmit = (data) => {
     createUser(data.email, data.password)
       .then((result) => {
-        toast.success("User create successfully");
-        console.log(result.user);
+        if (result.user) {
+          //navigate route
+
+          navigate(from);
+        }
       })
       .catch((error) => {
         toast.error(error.message + "Something went wrong");
