@@ -1,5 +1,4 @@
-/* eslint-disable no-unused-vars */
-import { Link, useLocation, useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { MdAddPhotoAlternate } from "react-icons/md";
 import { IoMdEyeOff } from "react-icons/io";
 import { FaArrowRightLong } from "react-icons/fa6";
@@ -11,22 +10,24 @@ import "react-toastify/dist/ReactToastify.css";
 import { Helmet } from "react-helmet-async";
 
 const Register = () => {
-  const { createUser, user } = useContext(AuthContext);
+  const { createUser, updateUserProfile } = useContext(AuthContext);
 
   const { register, handleSubmit } = useForm();
 
   const navigate = useNavigate();
-  const location = useLocation();
-  const from = location?.state || "/";
+
+  const from = "/login";
 
   const onSubmit = (data) => {
-    createUser(data.email, data.password)
-      .then((result) => {
-        if (result.user) {
-          //navigate route
-
-          navigate(from);
-        }
+    const { email, password, image, fullName } = data;
+    createUser(email, password)
+      .then(() => {
+        updateUserProfile(fullName, image).then(() => {
+          toast.success("User created successfully");
+          setTimeout(() => {
+            navigate(from);
+          }, 1000);
+        });
       })
       .catch((error) => {
         toast.error(error.message + "Something went wrong");
@@ -75,12 +76,12 @@ const Register = () => {
               <label className="input flex items-center gap-2 rounded-full h-[60px]">
                 <MdAddPhotoAlternate className="text-lg text-gray-500" />
                 <input
-                  type="text"
+                  type="url"
                   className="grow"
-                  id="photoURL"
-                  name="photoURL"
+                  id="photo"
+                  name="photo"
                   placeholder="https://example.jpeg"
-                  {...register("photoURL", { required: true })}
+                  {...register("image", { required: true })}
                 />
               </label>
 

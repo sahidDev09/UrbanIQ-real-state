@@ -1,4 +1,3 @@
-/* eslint-disable no-unused-vars */
 /* eslint-disable react/prop-types */
 import { createContext, useEffect, useState } from "react";
 import {
@@ -9,6 +8,7 @@ import {
   signInWithEmailAndPassword,
   signInWithPopup,
   signOut,
+  updateProfile,
 } from "firebase/auth";
 import app from "../Firebase/firebase.config";
 import { GoogleAuthProvider } from "firebase/auth";
@@ -31,6 +31,15 @@ const AuthProvider = ({ children }) => {
   const createUser = (email, password) => {
     setLoading(true);
     return createUserWithEmailAndPassword(auth, email, password);
+  };
+
+  //upadate profile code
+
+  const updateUserProfile = (name, image) => {
+    return updateProfile(auth.currentUser, {
+      displayName: name,
+      photoURL: image,
+    });
   };
 
   //login user
@@ -84,6 +93,7 @@ const AuthProvider = ({ children }) => {
     gitLogin,
     logOut,
     loading,
+    updateUserProfile,
   };
 
   return (
