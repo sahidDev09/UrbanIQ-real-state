@@ -6,6 +6,10 @@ import Error from "../Root/Error";
 import Login from "../components/pages/Authentication/Login";
 import Register from "../components/pages/Authentication/Register";
 import PrivateRoute from "../privateRoute/PrivateRoute";
+import UpadateProfile from "../components/pages/Profile/UpadateProfile";
+import Team from "../components/pages/Team/Team";
+import About from "../components/pages/About/About";
+import Contact from "../components/pages/Home/Contact/Contact";
 
 const router = createBrowserRouter([
   {
@@ -17,6 +21,21 @@ const router = createBrowserRouter([
         path: "/",
         element: <Home></Home>,
       },
+
+      {
+        path: "/team",
+        element: (
+          <PrivateRoute>
+            <Team></Team>
+          </PrivateRoute>
+        ),
+      },
+
+      {
+        path: "/about",
+        element: <About></About>,
+      },
+
       {
         path: "/property/:id",
         element: (
@@ -34,6 +53,18 @@ const router = createBrowserRouter([
       {
         path: "/register",
         element: <Register></Register>,
+      },
+      {
+        path: "/contact",
+        element: <Contact></Contact>,
+      },
+      {
+        path: "/update",
+        element: (
+          <PrivateRoute>
+            <UpadateProfile></UpadateProfile>
+          </PrivateRoute>
+        ),
       },
     ],
   },

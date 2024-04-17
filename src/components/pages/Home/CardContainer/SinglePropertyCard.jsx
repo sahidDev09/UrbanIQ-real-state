@@ -4,8 +4,17 @@ import { FaMapLocationDot } from "react-icons/fa6";
 import { GiPriceTag } from "react-icons/gi";
 import { FaHeart } from "react-icons/fa";
 import { Link } from "react-router-dom";
+import Aos from "aos";
+import "aos/dist/aos.css";
+import { useEffect } from "react";
 
 const SinglePropertyCard = ({ properties }) => {
+  // aos animation
+
+  useEffect(() => {
+    Aos.init();
+  }, []);
+
   const {
     id,
     image,
@@ -20,7 +29,9 @@ const SinglePropertyCard = ({ properties }) => {
   } = properties;
 
   return (
-    <div className=" grid grid-cols-3 bg-slate-200 p-6 rounded-xl gap-4">
+    <div
+      data-aos="fade-down"
+      className=" grid grid-cols-3 bg-slate-200 p-6 rounded-xl gap-4">
       {/* card image */}
       <div>
         <img

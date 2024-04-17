@@ -1,0 +1,75 @@
+[
+    {
+      "profile_img": "https://i.ibb.co/JHP9HSm/1-intro-photo-final.jpg",
+      "name": "John Doe",
+      "designation": "Senior Real Estate Agent",
+      "email": "john.doe@example.com"
+    },
+    {
+      "profile_img": "https://i.ibb.co/KGM5SyQ/images-2.jpg",
+      "name": "Jane Smith",
+      "designation": "Commercial Property Manager",
+      "email": "jane.smith@example.com"
+    },
+    {
+      "profile_img": "https://i.ibb.co/ZhrNdCn/pexels-andrea-piacquadio-3763188.jpg",
+      "name": "Alex Johnson",
+      "designation": "Real Estate Consultant",
+      "email": "alex.johnson@example.com"
+    },
+    {
+      "profile_img": "https://i.ibb.co/N2TJMfj/pexels-photo-343717.jpg",
+      "name": "Emily Brown",
+      "designation": "Leasing Specialist",
+      "email": "emily.brown@example.com"
+    },
+    {
+      "profile_img": "https://i.ibb.co/1TvsqRQ/pexels-photo-415829.webp",
+      "name": "Michael Wilson",
+      "designation": "Commercial Property Analyst",
+      "email": "michael.wilson@example.com"
+    },
+    {
+      "profile_img": "https://i.ibb.co/jbkvDXT/pexels-photo-774909.jpg",
+      "name": "Sarah Thompson",
+      "designation": "Real Estate Broker",
+      "email": "sarah.thompson@example.com"
+    },
+    {
+      "profile_img": "https://i.ibb.co/BnHSXHs/pexels-photo-1040880-2.jpg",
+      "name": "David Martinez",
+      "designation": "Investment Advisor",
+      "email": "david.martinez@example.com"
+    },
+    {
+      "profile_img": "https://i.ibb.co/bJs2n8T/pexels-photo-1542085.jpg",
+      "name": "Jessica Lee",
+      "designation": "Commercial Property Developer",
+      "email": "jessica.lee@example.com"
+    },
+    {
+      "profile_img": "https://i.ibb.co/SN4R7fG/pexels-photo-2340978.webp",
+      "name": "Chris Adams",
+      "designation": "Real Estate Attorney",
+      "email": "chris.adams@example.com"
+    },
+    {
+      "profile_img": "https://i.ibb.co/129cjkk/pexels-photo-2616960.webp",
+      "name": "Melissa Garcia",
+      "designation": "Marketing Specialist",
+      "email": "melissa.garcia@example.com"
+    },
+    {
+      "profile_img": "https://i.ibb.co/cY8zq2k/pexels-photo-3763188.webp",
+      "name": "Ryan Clark",
+      "designation": "Commercial Property Appraiser",
+      "email": "ryan.clark@example.com"
+    },
+    {
+      "profile_img": "https://i.ibb.co/xmCFkJM/pexels-photo-3775540.jpg",
+      "name": "Nicole Turner",
+      "designation": "Client Relations Manager",
+      "email": "nicole.turner@example.com"
+    }
+  ]
+  
