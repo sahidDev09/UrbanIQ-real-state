@@ -34,14 +34,18 @@ UrbanIQ is a modern website designed for urban property enthusiasts. It offers a
 - [Swiper.js](https://swiperjs.com/react)
 - [react-toastify](https://fkhadra.github.io/react-toastify/)
 
-## Screenshots
 
-[Include screenshots here]
 
 ## Additional Links
 
 - **Live Link:** [UrbanIQ](http://localhost:5173/)
 - **Source Link:** [UrbanIQ GitHub Repository](http://localhost:5173/)
+
+
+## Screenshots
+
+### Property Card
+![Property Card](https://i.ibb.co/vVWxfw9/SCR-20240417-tdah.png)
 
 ## Getting Started
 

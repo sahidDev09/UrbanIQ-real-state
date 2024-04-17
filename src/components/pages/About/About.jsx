@@ -4,7 +4,7 @@ import Lottie from "lottie-react";
 
 const About = () => {
   return (
-    <div className="grid md:grid-cols-1 lg:grid-cols-2 items-center gap-4 my-7 m-2 md:m-0">
+    <div className="lg:my-10 grid md:grid-cols-1 lg:grid-cols-2 items-center gap-4 m-2 md:m-0">
       <Helmet>
             <title>UrbanIQ | about</title>
         </Helmet>
