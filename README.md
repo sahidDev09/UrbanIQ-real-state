@@ -39,13 +39,26 @@ UrbanIQ is a modern website designed for urban property enthusiasts. It offers a
 ## Additional Links
 
 - **Live Link:** [UrbanIQ](http://localhost:5173/)
-- **Source Link:** [UrbanIQ GitHub Repository](http://localhost:5173/)
+- **Source Link:** [UrbanIQ GitHub Repository](https://github.com/programming-hero-web-course-4/b9a9-real-estate-sahidDev09)
 
 
 ## Screenshots
 
 ### Property Card
 ![Property Card](https://i.ibb.co/vVWxfw9/SCR-20240417-tdah.png)
+
+### Login page
+![Login page](https://i.ibb.co/D11WYgm/SCR-20240417-tdef.png)
+
+
+### Sign-up page
+![Sign-up page](https://i.ibb.co/y0vG2Ph/SCR-20240417-tihn.png)
+
+### Team Page
+![Team page](https://i.ibb.co/9rJGXz8/SCR-20240417-tebb.png)
+
+### About Page
+![About page](https://i.ibb.co/q084c5c/SCR-20240417-teqr.png)
 
 ## Getting Started
 
