@@ -2,8 +2,9 @@ import { Link, useLocation, useNavigate } from "react-router-dom";
 
 import { FaArrowRightLong } from "react-icons/fa6";
 import { IoMdEyeOff } from "react-icons/io";
+import { IoMdEye } from "react-icons/io";
 import { useForm } from "react-hook-form";
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { AuthContext } from "../../../Providers/AuthProvider";
 
 import { ToastContainer, toast } from "react-toastify";
@@ -14,6 +15,8 @@ import OthersLogin from "./OthersLogin";
 const Login = () => {
   const { loginUser } = useContext(AuthContext);
   const { register, handleSubmit } = useForm();
+
+  const [showPass, setShowPass] = useState(false);
 
   const navigate = useNavigate();
   const location = useLocation();
@@ -29,7 +32,7 @@ const Login = () => {
         }
       })
       .catch(() => {
-        toast.error("Please check email and password!");
+        toast.error("Incorrect email or password!");
       });
   };
 
@@ -82,7 +85,7 @@ const Login = () => {
                     />
                   </svg>
                   <input
-                    type="password"
+                    type={showPass ? "text" : "password"}
                     className="grow"
                     name="password"
                     autoComplete="current-password"
@@ -91,7 +94,13 @@ const Login = () => {
                     {...register("password", { required: true })}
                   />
                 </div>
-                <IoMdEyeOff className=" text-xl text-gray-600"></IoMdEyeOff>
+                <span onClick={() => setShowPass(!showPass)}>
+                  {showPass ? (
+                    <IoMdEyeOff className=" text-xl text-gray-600"></IoMdEyeOff>
+                  ) : (
+                    <IoMdEye className="text-xl text-gray-600"></IoMdEye>
+                  )}
+                </span>
               </label>
 
               <a className="text-sm ml-4 text-red-600 cursor-pointer">

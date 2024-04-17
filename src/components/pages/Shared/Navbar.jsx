@@ -7,7 +7,7 @@ import stockProfile from "../../../assets/profile.png";
 const Navbar = () => {
   const { logOut, user } = useContext(AuthContext);
 
-  console.log(user);
+
 
   const navlinks = (
     <>
@@ -63,7 +63,7 @@ const Navbar = () => {
             {navlinks}
           </ul>
         </div>
-        <img className=" w-40" src={logo} alt="" />
+        <Link to="/"><img className=" w-40" src={logo} alt="" /></Link>
       </div>
       <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal px-1">{navlinks}</ul>
@@ -71,7 +71,7 @@ const Navbar = () => {
       <div className="navbar-end">
         {user ? (
           <div className=" flex items-center gap-2">
-            <div data-tip={user.email} className=" tooltip tooltip-bottom w-12 h-12 rounded-full border p-1">
+            <div data-tip={user.displayName} className=" tooltip tooltip-bottom w-12 h-12 rounded-full border p-1">
               <img
                 className="rounded-full h-full w-full"
                 alt="Tailwind CSS Navbar component"

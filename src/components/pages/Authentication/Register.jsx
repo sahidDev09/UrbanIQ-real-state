@@ -2,7 +2,8 @@ import { Link, useNavigate } from "react-router-dom";
 import { MdAddPhotoAlternate } from "react-icons/md";
 import { IoMdEyeOff } from "react-icons/io";
 import { FaArrowRightLong } from "react-icons/fa6";
-import { useContext } from "react";
+import { IoMdEye } from "react-icons/io";
+import { useContext, useState } from "react";
 import { AuthContext } from "../../../Providers/AuthProvider";
 import { useForm } from "react-hook-form";
 import { ToastContainer, toast } from "react-toastify";
@@ -13,13 +14,28 @@ const Register = () => {
   const { createUser, updateUserProfile } = useContext(AuthContext);
 
   const { register, handleSubmit } = useForm();
+  const [showPass, setShowPass] = useState(false);
 
   const navigate = useNavigate();
 
-  const from = "/login";
+  const from = "/";
 
   const onSubmit = (data) => {
     const { email, password, image, fullName } = data;
+
+    //password validation
+
+    if (password.length < 6) {
+      toast.warning("Password should be at least 6 charecters");
+      return;
+    } else if (!/[A-Z]/.test(password)) {
+      toast.warning("Password should be at least one uppercase characters");
+      return;
+    } else if (!/[a-z]/.test(password)) {
+      toast.warning("Password should be at least one lowercase characters");
+      return;
+    }
+
     createUser(email, password)
       .then(() => {
         updateUserProfile(fullName, image).then(() => {
@@ -80,6 +96,7 @@ const Register = () => {
                   className="grow"
                   id="photo"
                   name="photo"
+                  required
                   placeholder="https://example.jpeg"
                   {...register("image", { required: true })}
                 />
@@ -103,6 +120,7 @@ const Register = () => {
                   id="email"
                   name="email"
                   placeholder="Enter your E-mail"
+                  required
                   {...register("email", { required: true })}
                 />
               </label>
@@ -124,15 +142,22 @@ const Register = () => {
                     />
                   </svg>
                   <input
-                    type="password"
+                    type={showPass ? "text" : "password"}
                     className="grow"
                     id="password"
                     name="password"
+                    required
                     placeholder="Set your secret password"
                     {...register("password", { required: true })}
                   />
                 </div>
-                <IoMdEyeOff className="text-xl text-gray-600" />
+                <span onClick={() => setShowPass(!showPass)}>
+                  {showPass ? (
+                    <IoMdEyeOff className=" text-xl text-gray-600"></IoMdEyeOff>
+                  ) : (
+                    <IoMdEye className="text-xl text-gray-600"></IoMdEye>
+                  )}
+                </span>
               </label>
 
               <input
