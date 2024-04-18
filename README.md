@@ -38,7 +38,7 @@ UrbanIQ is a modern website designed for urban property enthusiasts. It offers a
 
 ## Additional Links
 
-- **Live Link:** [UrbanIQ](http://localhost:5173/)
+- **Live Link:** [UrbanIQ](https://urbaniq-2da33.web.app)
 - **Source Link:** [UrbanIQ GitHub Repository](https://github.com/programming-hero-web-course-4/b9a9-real-estate-sahidDev09)
 
 

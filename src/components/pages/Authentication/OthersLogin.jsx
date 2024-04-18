@@ -3,6 +3,7 @@ import githubLogin from "../../../assets/Githublogin.png";
 import { useContext } from "react";
 import { AuthContext } from "../../../Providers/AuthProvider";
 import { useLocation, useNavigate } from "react-router-dom";
+import { toast, ToastContainer } from "react-toastify";
 
 const OthersLogin = () => {
   const { googleLogin, gitLogin } = useContext(AuthContext);
@@ -18,8 +19,10 @@ const OthersLogin = () => {
     socialProvider().then((result) => {
       if (result.user) {
         //navigate route
-
-        navigate(from);
+        toast.success("Logged in");
+        setTimeout(() => {
+          navigate(from);
+        }, 1000);
       }
     });
   };
@@ -47,6 +50,7 @@ const OthersLogin = () => {
           With <span className=" font-semibold">Github</span>
         </h1>
       </div>
+      <ToastContainer />
     </div>
   );
 };

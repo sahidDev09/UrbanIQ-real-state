@@ -26,9 +26,10 @@ const Login = () => {
     loginUser(data.email, data.password)
       .then((result) => {
         if (result.user) {
-          //navigate route
-
-          navigate(from);
+          toast.success("Logged in");
+          setTimeout(() => {
+            navigate(from);
+          }, 1000);
         }
       })
       .catch(() => {

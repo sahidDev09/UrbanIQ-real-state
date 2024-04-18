@@ -27,7 +27,7 @@ const UpdateProfile = () => {
   return (
     <div className="my-10 lg:my-0 flex flex-col gap-5 justify-center md:h-[800px] lg:h-78">
       <img
-        className="mx-auto rounded-full w-48 h-48 border-2 p-2"
+        className=" object-cover mx-auto rounded-full w-48 h-48 border-2 p-2"
         src={user.photoURL || ""}
         alt=""
       />

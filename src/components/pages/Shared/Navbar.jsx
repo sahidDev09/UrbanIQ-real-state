@@ -3,9 +3,17 @@ import logo from "../../../assets/urbanIQ_logo.png";
 import { useContext } from "react";
 import { AuthContext } from "../../../Providers/AuthProvider";
 import stockProfile from "../../../assets/profile.png";
+import { toast, ToastContainer } from "react-toastify";
 
 const Navbar = () => {
   const { logOut, user } = useContext(AuthContext);
+
+  const handlelogOut = () => {
+    toast.error("Logged out");
+    setInterval(() => {
+      logOut();
+    }, 1000);
+  };
 
   const navlinks = (
     <>
@@ -77,14 +85,16 @@ const Navbar = () => {
               data-tip={user.displayName}
               className=" tooltip tooltip-bottom w-12 h-12 rounded-full border p-1">
               <img
-                className="rounded-full h-full w-full"
+                className=" object-cover rounded-full h-full w-full"
                 alt="Tailwind CSS Navbar component"
                 src={user?.photoURL || stockProfile}
               />
             </div>
 
             <Link>
-              <button onClick={logOut} className="btn bg-success text-white">
+              <button
+                onClick={handlelogOut}
+                className="btn bg-success text-white">
                 Logout
               </button>
             </Link>
@@ -95,6 +105,7 @@ const Navbar = () => {
           </Link>
         )}
       </div>
+      <ToastContainer/>
     </div>
   );
 };
