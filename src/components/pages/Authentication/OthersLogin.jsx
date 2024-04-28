@@ -8,7 +8,6 @@ import { toast, ToastContainer } from "react-toastify";
 const OthersLogin = () => {
   const { googleLogin, gitLogin } = useContext(AuthContext);
 
-
   // code for navigation route
 
   const navigate = useNavigate();
@@ -19,7 +18,7 @@ const OthersLogin = () => {
     socialProvider().then((result) => {
       if (result.user) {
         //navigate route
-        toast.success("Logged in");
+        toast.success("Logged in", { autoClose: 2000 });
         setTimeout(() => {
           navigate(from);
         }, 1000);

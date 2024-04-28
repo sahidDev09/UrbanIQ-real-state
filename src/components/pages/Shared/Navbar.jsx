@@ -105,7 +105,7 @@ const Navbar = () => {
           </Link>
         )}
       </div>
-      <ToastContainer/>
+      <ToastContainer />
     </div>
   );
 };
